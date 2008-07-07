@@ -6,6 +6,8 @@ api_version: 1
 default_expiration: 7d
 
 handlers:
+- url: /xn/.*
+  script: gae-rest/xn.py
 - url: /static/(.*\.(css|js|jpg|png|gif|exe))
   static_files: static/\1
   upload: static/(.*\.(css|js|jpg|png|gif|exe))
